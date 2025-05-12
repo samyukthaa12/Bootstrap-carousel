@@ -1,19 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Carousel with Cards and Modal</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Header -->
-   <!-- navbar -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carousel, Cards and Modal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Carousel</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -25,255 +32,497 @@
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
             </li>
           </ul>
 
           <!-- search bar -->
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
           </form>
         </div>
       </div>
     </nav>
 
-<!-- Carousel -->
-<div id="carouselSlide" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="5000">
-      <div class="d-block w-100 bg-secondary" style="height: 400px;"></div>
-      <div class="carousel-caption text-start" style="top: 50%; transform: translateY(-50%); bottom: auto;">
-        <h1 class="text-white">Example headline.</h1>
-        <p class="text-white">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-        <a class="btn btn-primary btn-lg" href="#">Sign up today</a>
+    <!-- Carousel -->
+    <div id="carouselSlide" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselSlide"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselSlide"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselSlide"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
       </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-      <div class="d-block w-100 bg-dark" style="height: 400px;"></div>
-      <div class="carousel-caption text-start" style="top: 50%; transform: translateY(-50%); bottom: auto;">
-        <h1 class="text-white">Example headline.</h1>
-        <p class="text-white">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-        <a class="btn btn-success btn-lg" href="#">Sign up today</a>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-      <div class="d-block w-100 bg-primary" style="height: 400px;"></div>
-      <div class="carousel-caption text-start" style="top: 50%; transform: translateY(-50%); bottom: auto;">
-        <h1 class="text-white">Example headline.</h1>
-        <p class="text-white">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-        <a class="btn btn-warning btn-lg" href="#">Sign up today</a>
-      </div>
-    </div>
-  </div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlide" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselSlide" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-<!-- Cards -->
-<div class="container my-5">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-
-    <!-- Card 1 -->
-    <div class="col">
-      <div class="card h-100">
-        <div class="background bg-secondary" style="height: 150px; object-fit: cover;"></div>
-        <div class="card-body">
-          <h5 class="card-title">Card Title 1</h5>
-          <p class="card-text">This is a sample card with some supporting text below.</p>
+      <div class="carousel-inner">
+        <!-- slide 1 -->
+        <div class="carousel-item active" data-bs-interval="5000">
+          <div class="d-block w-100 bg-secondary" style="height: 400px"></div>
+          <div
+            class="carousel-caption text-start"
+            style="top: 50%; transform: translateY(-50%); bottom: auto"
+          >
+            <h1 class="text-white">Example headline.</h1>
+            <p class="text-white">
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            </p>
+            <a class="btn btn-primary btn-lg" href="#">Sign up today</a>
+          </div>
         </div>
-        <div class="card-footer">
-          <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal1">View</button>
-          <button class="btn btn-outline-secondary btn-sm">Edit</button>
-        </div>
-      </div>
-    </div>
 
-    <!-- Card 2 -->
-    <div class="col">
-      <div class="card h-100">
-        <div class="background bg-secondary" style="height: 150px; object-fit: cover;"></div>
-        <div class="card-body">
-          <h5 class="card-title">Card Title 2</h5>
-          <p class="card-text">This is a sample card with some supporting text below.</p>
+        <!-- slide 2 -->
+        <div class="carousel-item" data-bs-interval="3000">
+          <div class="d-block w-100 bg-dark" style="height: 400px"></div>
+          <div
+            class="carousel-caption text-start"
+            style="top: 50%; transform: translateY(-50%); bottom: auto"
+          >
+            <h1 class="text-white">Example headline.</h1>
+            <p class="text-white">
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            </p>
+            <a class="btn btn-success btn-lg" href="#">Sign up today</a>
+          </div>
         </div>
-        <div class="card-footer">
-          <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal1">View</button>
-          <button class="btn btn-outline-secondary btn-sm">Edit</button>
+
+        <!-- slide 3 -->
+        <div class="carousel-item" data-bs-interval="3000">
+          <div class="d-block w-100 bg-primary" style="height: 400px"></div>
+          <div
+            class="carousel-caption text-start"
+            style="top: 50%; transform: translateY(-50%); bottom: auto"
+          >
+            <h1 class="text-white">Example headline.</h1>
+            <p class="text-white">
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            </p>
+            <a class="btn btn-warning btn-lg" href="#">Sign up today</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="col">
-      <div class="card h-100">
-        <div class="background bg-secondary" style="height: 150px; object-fit: cover;"></div>
-        <div class="card-body">
-          <h5 class="card-title">Card Title 3</h5>
-          <p class="card-text">This is a sample card with some supporting text below.</p>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal1">View</button>
-          <button class="btn btn-outline-secondary btn-sm">Edit</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="col">
-      <div class="card h-100">
-        <div class="background bg-secondary" style="height: 150px; object-fit: cover;"></div>
-        <div class="card-body">
-          <h5 class="card-title">Card Title 4</h5>
-          <p class="card-text">This is a sample card with some supporting text below.</p>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal1">View</button>
-          <button class="btn btn-outline-secondary btn-sm">Edit</button>
-        </div>
-      </div>
+      <!-- next and prev button -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselSlide"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselSlide"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
-    <!-- Card 5 -->
-    <div class="col">
-      <div class="card h-100">
-        <div class="background bg-secondary" style="height: 150px; object-fit: cover;"></div>
-        <div class="card-body">
-          <h5 class="card-title">Card Title 5</h5>
-          <p class="card-text">This is a sample card with some supporting text below.</p>
+    <!-- Cards -->
+    <div class="container my-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="background bg-secondary"
+              style="height: 150px; object-fit: cover"
+            ></div>
+            <div class="card-body">
+              <h5 class="card-title">Card Title 1</h5>
+              <p class="card-text">
+                This is a sample card with some supporting text below.
+              </p>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal1"
+                >
+                  View
+                </button>
+                <button class="btn btn-outline-secondary btn-sm">Edit</button>
+              </div>
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i>8 mins</small
+              >
+            </div>
+          </div>
         </div>
-        <div class="card-footer">
-          <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal1">View</button>
-          <button class="btn btn-outline-secondary btn-sm">Edit</button>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="background bg-secondary"
+              style="height: 150px; object-fit: cover"
+            ></div>
+            <div class="card-body">
+              <h5 class="card-title">Card Title 2</h5>
+              <p class="card-text">
+                This is a sample card with some supporting text below.
+              </p>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal1"
+                >
+                  View
+                </button>
+                <button class="btn btn-outline-secondary btn-sm">Edit</button>
+              </div>
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i>8 mins</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="background bg-secondary"
+              style="height: 150px; object-fit: cover"
+            ></div>
+            <div class="card-body">
+              <h5 class="card-title">Card Title 3</h5>
+              <p class="card-text">
+                This is a sample card with some supporting text below.
+              </p>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal1"
+                >
+                  View
+                </button>
+                <button class="btn btn-outline-secondary btn-sm">Edit</button>
+              </div>
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i>8 mins</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="background bg-secondary"
+              style="height: 150px; object-fit: cover"
+            ></div>
+            <div class="card-body">
+              <h5 class="card-title">Card Title 4</h5>
+              <p class="card-text">
+                This is a sample card with some supporting text below.
+              </p>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal1"
+                >
+                  View
+                </button>
+                <button class="btn btn-outline-secondary btn-sm">Edit</button>
+              </div>
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i>8 mins</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="background bg-secondary"
+              style="height: 150px; object-fit: cover"
+            ></div>
+            <div class="card-body">
+              <h5 class="card-title">Card Title 5</h5>
+              <p class="card-text">
+                This is a sample card with some supporting text below.
+              </p>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal1"
+                >
+                  View
+                </button>
+                <button class="btn btn-outline-secondary btn-sm">Edit</button>
+              </div>
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i>8 mins</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card h-100">
+            <div
+              class="background bg-secondary"
+              style="height: 150px; object-fit: cover"
+            ></div>
+            <div class="card-body">
+              <h5 class="card-title">Card Title 6</h5>
+              <p class="card-text">
+                This is a sample card with some supporting text below.
+              </p>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal1"
+                >
+                  View
+                </button>
+                <button class="btn btn-outline-secondary btn-sm">Edit</button>
+              </div>
+              <small class="text-muted"
+                ><i class="bi bi-clock"></i>8 mins</small
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Card 6 -->
-    <div class="col">
-      <div class="card h-100">
-        <div class="background bg-secondary" style="height: 150px; object-fit: cover;"></div>
-        <div class="card-body">
-          <h5 class="card-title">Card Title 6</h5>
-          <p class="card-text">This is a sample card with some supporting text below.</p>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal1">View</button>
-          <button class="btn btn-outline-secondary btn-sm">Edit</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modal1Label">Card Title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        This is a sample card with some supporting text below.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- dropdowns -->
-<div class="container my-4">
-  <div class="accordion bg-secondary text-white" id="accordionExample" >
-    
-    <!-- First item: Open by default -->
-    <div class="accordion-item" >
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button bg-secondary text-white" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Dropdown #1
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-        data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique culpa doloremque dolorum, animi doloribus ab enim. Doloremque, facere dignissimos veniam iusto facilis maiores pariatur. Est similique perspiciatis accusamus quis pariatur!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ad magnam exercitationem laudantium, alias possimus rem placeat praesentium culpa iste id voluptas explicabo perferendis corporis, repellat cupiditate fugit sit vero!
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia vel cum quam voluptate quae dignissimos aspernatur obcaecati. Quo beatae excepturi delectus aut enim facere odio mollitia, non adipisci, ipsum rem?
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal1"
+      tabindex="-1"
+      aria-labelledby="modal1Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal1Label">Card Title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            This is a sample card with some supporting text below.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Second item -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed bg-secondary text-white" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Dropdown #2
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-        data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptatibus autem. Voluptatem officia nobis, asperiores esse similique maxime suscipit laborum placeat distinctio explicabo quia nihil accusamus recusandae, ad quae exercitationem.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem ipsa explicabo soluta sint numquam recusandae sunt nihil reiciendis earum! Porro reprehenderit, dolores est quas deleniti cupiditate necessitatibus magni odit?
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptatem fugiat aperiam saepe deleniti doloremque omnis repellendus voluptate voluptas rerum itaque possimus sit eum, repudiandae, provident, sapiente nihil. Esse, alias.
+    <!-- dropdowns -->
+    <div class="container my-4">
+      <div class="accordion bg-secondary text-white" id="accordionExample">
+        <!-- dropdown 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button bg-secondary text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Dropdown #1
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Similique culpa doloremque dolorum, animi doloribus ab enim.
+              Doloremque, facere dignissimos veniam iusto facilis maiores
+              pariatur. Est similique perspiciatis accusamus quis pariatur!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ad
+              magnam exercitationem laudantium, alias possimus rem placeat
+              praesentium culpa iste id voluptas explicabo perferendis corporis,
+              repellat cupiditate fugit sit vero! Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Quia vel cum quam voluptate quae
+              dignissimos aspernatur obcaecati. Quo beatae excepturi delectus
+              aut enim facere odio mollitia, non adipisci, ipsum rem?
+            </div>
+          </div>
+        </div>
+
+        <!-- dropdown 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed bg-secondary text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Dropdown #2
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              voluptatibus autem. Voluptatem officia nobis, asperiores esse
+              similique maxime suscipit laborum placeat distinctio explicabo
+              quia nihil accusamus recusandae, ad quae exercitationem. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Saepe autem
+              ipsa explicabo soluta sint numquam recusandae sunt nihil
+              reiciendis earum! Porro reprehenderit, dolores est quas deleniti
+              cupiditate necessitatibus magni odit? Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Unde voluptatem fugiat aperiam
+              saepe deleniti doloremque omnis repellendus voluptate voluptas
+              rerum itaque possimus sit eum, repudiandae, provident, sapiente
+              nihil. Esse, alias.
+            </div>
+          </div>
+        </div>
+
+        <!-- dropdown 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed bg-secondary text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Dropdown #3
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate necessitatibus at doloremque? Numquam a maxime in non
+              libero et nesciunt, ratione optio quas nihil distinctio quaerat
+              tempora dolorum dicta suscipit! Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Est ea nesciunt, culpa autem
+              blanditiis optio quo commodi iusto voluptatem, perferendis cum
+              iste nihil perspiciatis accusamus, saepe sunt mollitia corporis
+              minus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tenetur, deleniti. Tempore quam vitae ut, beatae eos ipsam
+              sapiente saepe quisquam dignissimos, atque eius ex enim blanditiis
+              cum sunt cumque dicta.
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Third item -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed bg-secondary text-white" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Dropdown #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-        data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate necessitatibus at doloremque? Numquam a maxime in non libero et nesciunt, ratione optio quas nihil distinctio quaerat tempora dolorum dicta suscipit!
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ea nesciunt, culpa autem blanditiis optio quo commodi iusto voluptatem, perferendis cum iste nihil perspiciatis accusamus, saepe sunt mollitia corporis minus?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, deleniti. Tempore quam vitae ut, beatae eos ipsam sapiente saepe quisquam dignissimos, atque eius ex enim blanditiis cum sunt cumque dicta.
-        </div>
+    <!-- footer part -->
+    <footer class="container py-4 d-flex justify-content-between border-top">
+      <div>
+        <p class="mb-0">
+          &copy; 2017–2018 Company, Inc. · <a href="#">Privacy</a> ·
+          <a href="#">Terms</a>
+        </p>
       </div>
-    </div>
-    
-  </div>
-</div>
+      <div>
+        <a href="#" class="text-end">Back to top</a>
+      </div>
+    </footer>
 
-<!-- bottom part -->
-<footer class="container py-4 d-flex justify-content-between border-top">
-  <div>
-    <p class="mb-0">&copy; 2017–2018 Company, Inc. · 
-      <a href="#">Privacy</a> · 
-      <a href="#">Terms</a>
-    </p>
-  </div>
-  <div>
-    <a href="#" class="text-end">Back to top</a>
-  </div>
-</footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
